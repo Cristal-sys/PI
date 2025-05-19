@@ -19,6 +19,14 @@ long double standard_deviation_mean=0;
 
 };
 
+/* @statement
+ * decl when we're atributing
+ * e.g. x+y is func but f=x+y is a func_assign
+ *
+ * service is for other system services like fit(x, y)
+ */
+enum class statement{var, var_assign, incompl_var_decl, func, func_assign, service}; 
+
 std::string adition_chomper(std::stringstream&);
 std::string multiplication_chomper(std::stringstream&);
 bool is_there_free_plus_or_minus(std::string&);
